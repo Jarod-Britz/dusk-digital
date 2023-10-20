@@ -1,0 +1,7 @@
+{
+  "name": "dusk-digital",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
