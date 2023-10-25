@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "rose-b72d9": {
+      "hosting": {
+        "app": [
+          "rose-b72d9"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "rose-b72d9"
+  }
+}
