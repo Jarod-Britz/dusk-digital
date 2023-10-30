@@ -10,8 +10,8 @@ import { AuthenticationService } from '../authentication.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  nickname = '';
-  message: string = '';
+  // nickname = '';
+  // message: string = '';
   user:any
   constructor(public route:Router, public authService:AuthenticationService, public socket: Socket, public navCtrl: NavController) {
     this.user = authService.getProfile()
@@ -27,9 +27,9 @@ export class HomePage {
     })
   }
 
-  sendMessage() {
-    this.socket.emit("Message", {message: this.message});
-  }
+  // sendMessage() {
+  //   this.socket.emit("Message", {message: this.message});
+  // }
 
   // joinChat() {
   //   this.socket.connect();

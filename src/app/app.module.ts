@@ -11,12 +11,23 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
-import { SocketIoModule, SocketIoConfig } from 'ng-socket-io';
-let config: SocketIoConfig = { url: 'http://localhost:3001', options: {}};
+// import { SocketIoModule, SocketIoConfig } from 'ng-socket-io';
+// let config: SocketIoConfig = { url: 'http://localhost:3001', options: {}};
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, RouterModule, IonicModule, AppRoutingModule, SocketIoModule.forRoot(config), provideFirebaseApp(() => initializeApp(environment.firebase)), provideAuth(() => getAuth()), AngularFireModule, provideFirestore(() => getFirestore()), AngularFireAuthModule, AngularFireModule.initializeApp(environment.firebaseConfig)],
+  imports: [
+    BrowserModule,
+    RouterModule,
+    IonicModule,
+    AppRoutingModule,
+    // SocketIoModule.forRoot(config),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    AngularFireModule,
+    provideFirestore(() => getFirestore()),
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig)],
   exports: [RouterModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
